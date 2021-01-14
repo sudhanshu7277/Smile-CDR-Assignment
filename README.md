@@ -15,5 +15,6 @@ Enabling the Submit button:
   1) Checkbox fields can either be tru or false.
   2) Text fields should have values (not blank/ undefined).
   3) On Submit (form data is printed in console and an alert appears with the submitted data).
+  4) Have added some extra properties to the questionnaire.json for user experience and to make it dynamic.
 
 
