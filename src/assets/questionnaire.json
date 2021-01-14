@@ -7,36 +7,51 @@
     "Patient"
   ],
   "date": "2010",
-  "item": [
+  "mainModalObject": [
     {
-      "linkId": "1",
-      "text": "Do you have allergies?",
-      "type": "boolean"
+       "linkId": "1",
+       "text": "Do you have allergies?",
+       "type": "boolean",
+       "htmlControlType":"checkbox",
+        "cssClassName":"form-control",
+        "abrvIndexName":"allergies"
     },
     {
       "linkId": "2",
       "text": "General questions",
       "type": "group",
-      "item": [
+      "items": [
         {
           "linkId": "2.1",
           "text": "What is your gender?",
-          "type": "string"
+          "type": "string",
+          "htmlControlType":"textbox",
+          "cssClassName":"form-control",
+          "abrvIndexName":"gender"
         },
         {
           "linkId": "2.2",
           "text": "What is your date of birth?",
-          "type": "date"
+          "type": "date",
+          "htmlControlType":"textbox",
+          "cssClassName":"form-control",
+          "abrvIndexName":"dob"
         },
         {
           "linkId": "2.3",
           "text": "What is your country of birth?",
-          "type": "string"
+          "type": "string",
+          "htmlControlType":"textbox",
+          "cssClassName":"form-control",
+          "abrvIndexName":"birthplace"
         },
         {
           "linkId": "2.4",
           "text": "What is your marital status?",
-          "type": "string"
+          "type": "string",
+          "htmlControlType":"textbox",
+         "cssClassName":"form-control",
+         "abrvIndexName":"maritalStatus"
         }
       ]
     },
@@ -44,16 +59,22 @@
       "linkId": "3",
       "text": "Intoxications",
       "type": "group",
-      "item": [
+      "items": [
         {
           "linkId": "3.1",
           "text": "Do you smoke?",
-          "type": "boolean"
+          "type": "boolean",
+          "htmlControlType":"checkbox",
+          "cssClassName":"form-control",
+          "abrvIndexName":"smokingStatus"
         },
         {
           "linkId": "3.2",
           "text": "Do you drink alchohol?",
-          "type": "boolean"
+          "type": "boolean",
+          "htmlControlType":"checkbox",
+        "cssClassName":"form-control",
+        "abrvIndexName":"alcoholStatus"
         }
       ]
     }
