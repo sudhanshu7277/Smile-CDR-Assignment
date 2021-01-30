@@ -10,6 +10,8 @@ export class QuestionnaireComp extends Component {
         someUserInput: undefined,
         checkboxInput: false,
         checked: true,
+        smokeChecked: true,
+        alcoholChecked: true,
         allergies: false,
         gender: '',
         birthplace: '',
@@ -44,17 +46,18 @@ export class QuestionnaireComp extends Component {
                 allergies: this.state.checked
             });
             this.checkIfSubmitButtonHasToBeEnabledOnDisabled();
+            this.setState({ checked: false });
         }
 
-        if(abrvIndexName === 'smoke' && htmlControlType === 'checkbox') {
-            this.setState({ checked: !this.state.checked });
-            this.setState({ smoke: this.state.checked });
+        if(abrvIndexName === 'smokingStatus' && htmlControlType === 'checkbox') {
+            this.setState({ smokeChecked: !this.state.smokeChecked });
+            this.setState({ smoke: this.state.smokeChecked });
             this.checkIfSubmitButtonHasToBeEnabledOnDisabled();
         }
 
-        if(abrvIndexName === 'alcohol' && htmlControlType === 'checkbox') {
-            this.setState({ checked: !this.state.checked });
-            this.setState({ alcohol: this.state.checked});
+        if(abrvIndexName === 'alcoholStatus' && htmlControlType === 'checkbox') {
+            this.setState({ alcoholChecked: !this.state.alcoholChecked });
+            this.setState({ alcohol: this.state.alcoholChecked});
             this.checkIfSubmitButtonHasToBeEnabledOnDisabled();
         }
 
